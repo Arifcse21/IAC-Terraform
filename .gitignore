@@ -1,3 +1,5 @@
+.env
+.loadenv
 .terraform/
 *.tfstate
 *.tfstate.backup
