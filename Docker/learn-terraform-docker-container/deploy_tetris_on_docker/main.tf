@@ -20,5 +20,5 @@ resource "docker_image" "uzyexe/tetris" {
 # Create the container
 resource "docker_container" "tetris" {
     image = docker_image.name.image_id
-    name = "tetris"
+    name = var.container_name
 }
