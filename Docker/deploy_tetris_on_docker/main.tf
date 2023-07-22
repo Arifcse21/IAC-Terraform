@@ -13,6 +13,10 @@ provider "docker" {
 
 # Create the container
 resource "docker_container" "tetris" {
-  image = "uzyexe/tetris"	# data.docker_image.tetris.name # access docker image name from data.tf
+  image = "uzyexe/tetris"
   name  = var.docker_container
+  ports {
+    internal = 8070
+    external = 8070
+  }
 }
